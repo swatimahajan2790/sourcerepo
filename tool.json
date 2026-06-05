@@ -1,0 +1,30 @@
+{
+  "Name": "Assign Room Function",
+  "Discipline": "Architecture",
+  "MainCategory": "Drafting",
+  "Category": "Sheets",
+  "Path": "Add-ins\\2025",
+  "IconPath": "\\Add-ins\\Icons\\AssignRoomFunction.png",
+  "Type": "Add-in",
+  "Version": "1.0.2",
+  "Description": "Used for assigning room functions for multiple rooms in single run",
+  "Owner": "Pravin Lande",
+  "InfoUrl": "https://4ce22.dar.com/sites/BIM-DP/Development/Pages/Assign-Room-Function.aspx",
+  "CommandName": "Command",
+  "CommandDisplayName": "Assign Room Function",
+  "CommandIconPath": "",
+  "Ver2022": "Add-ins\\2022\\AssignRoomFunction.dll",
+  "Ver2023": "Add-ins\\2023\\AssignRoomFunction.dll",
+  "Ver2024": "Add-ins\\2024\\AssignRoomFunction.dll",
+  "Ver2025": "Add-ins\\2025\\AssignRoomFunction.dll",
+  "UpdateVersion": "",
+  "CreatedDate": "2025-07-01T08:00:00",
+  "UpdatedDate": "2026-02-09T08:00:00",
+  "SupportedVer": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ]
+}
