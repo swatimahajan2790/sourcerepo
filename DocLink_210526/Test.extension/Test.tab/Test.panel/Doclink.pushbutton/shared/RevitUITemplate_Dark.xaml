@@ -1,0 +1,125 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--
+    ═══════════════════════════════════════════════════════════════════════════════
+     RevitUITemplate_Dark.xaml
+     Version : 1.0.0
+     Date    : 2026-04-02
+     ─────────────────────────────────────────────────────────────────────────────
+     DARK THEME OVERLAY
+
+     Merge this file AFTER RevitUITemplate.xaml to activate the dark theme.
+     This file republishes all Brush.* keys with dark color values.
+     Because §5-12 styles in the base file reference only Brush.* keys (not
+     Dark.Brush.*), they automatically adopt dark colors after this merge — no
+     style duplication required.
+
+     USAGE:
+       apply_template_to_window(win, template_path, dark=True)
+       # or in C#:
+       RevitUIResources.ApplyTo(win, dark: true);
+
+     TOOLS USING THIS:
+       GeometryControl — always dark
+    ═══════════════════════════════════════════════════════════════════════════════
+    -->
+
+    <ResourceDictionary.MergedDictionaries>
+        <!-- Base template must be loaded first. When loading via revit_ui_loader.py,
+             the base is already merged before this overlay is added. This entry is
+             here for standalone XAML editors / design-time previews only. -->
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         DARK OVERRIDES
+         Each key below exactly matches a Brush.* key from RevitUITemplate.xaml.
+         WPF resource lookup finds the last-merged value, so these override the
+         light values automatically for all styles in the base file.
+    ══════════════════════════════════════════════════════════════════════════ -->
+
+    <!-- Window / Surface -->
+    <SolidColorBrush x:Key="Brush.Window.Background"         Color="#1E1E23"/>
+    <SolidColorBrush x:Key="Brush.Panel.Background"          Color="#2A2A32"/>
+    <SolidColorBrush x:Key="Brush.Panel.Secondary"           Color="#24242C"/>
+    <SolidColorBrush x:Key="Brush.Panel.Elevated"            Color="#32323C"/>
+
+    <!-- Borders -->
+    <SolidColorBrush x:Key="Brush.Border.Default"            Color="#3C3C48"/>
+    <SolidColorBrush x:Key="Brush.Border.Focus"              Color="#0096DC"/>
+    <SolidColorBrush x:Key="Brush.Border.Subtle"             Color="#303040"/>
+
+    <!-- Text -->
+    <SolidColorBrush x:Key="Brush.Text.Primary"              Color="#E6E6F0"/>
+    <SolidColorBrush x:Key="Brush.Text.Secondary"            Color="#8C8CA0"/>
+    <SolidColorBrush x:Key="Brush.Text.Disabled"             Color="#505060"/>
+    <SolidColorBrush x:Key="Brush.Text.OnAccent"             Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="Brush.Text.OnDark"               Color="#E6E6F0"/>
+
+    <!-- Accent -->
+    <SolidColorBrush x:Key="Brush.Accent.Primary"            Color="#0096DC"/>
+    <SolidColorBrush x:Key="Brush.Accent.PrimaryHover"       Color="#00AAEE"/>
+    <SolidColorBrush x:Key="Brush.Accent.PrimaryPressed"     Color="#0080C0"/>
+    <SolidColorBrush x:Key="Brush.Accent.Green"              Color="#50B464"/>
+    <SolidColorBrush x:Key="Brush.Accent.GreenHover"         Color="#62C876"/>
+    <SolidColorBrush x:Key="Brush.Accent.GreenPressed"       Color="#3E9250"/>
+
+    <!-- Toolbar (kept dark even in dark mode — same values) -->
+    <SolidColorBrush x:Key="Brush.Toolbar.NavyBlue"          Color="#1C3050"/>
+    <SolidColorBrush x:Key="Brush.Toolbar.Purple"            Color="#301C50"/>
+    <SolidColorBrush x:Key="Brush.Toolbar.Button.Hover"      Color="#28406C"/>
+
+    <!-- Tab -->
+    <SolidColorBrush x:Key="Brush.Tab.Tint.Blue"             Color="#1A2840"/>
+    <SolidColorBrush x:Key="Brush.Tab.Tint.Green"            Color="#182818"/>
+    <SolidColorBrush x:Key="Brush.Tab.Selected"              Color="#2A2A32"/>
+    <SolidColorBrush x:Key="Brush.Tab.Unselected"            Color="#1E1E28"/>
+    <SolidColorBrush x:Key="Brush.Tab.Hover"                 Color="#252530"/>
+
+    <!-- Buttons -->
+    <SolidColorBrush x:Key="Brush.Button.Default"            Color="#3A3A48"/>
+    <SolidColorBrush x:Key="Brush.Button.Hover"              Color="#484858"/>
+    <SolidColorBrush x:Key="Brush.Button.Pressed"            Color="#2E2E3A"/>
+    <SolidColorBrush x:Key="Brush.Button.Disabled"           Color="#2A2A32"/>
+    <SolidColorBrush x:Key="Brush.Button.Danger"             Color="#F05050"/>
+    <SolidColorBrush x:Key="Brush.Button.DangerHover"        Color="#FF6060"/>
+    <SolidColorBrush x:Key="Brush.Button.DangerPressed"      Color="#CC3333"/>
+
+    <!-- Status -->
+    <SolidColorBrush x:Key="Brush.Status.OK"                 Color="#50C878"/>
+    <SolidColorBrush x:Key="Brush.Status.Error"              Color="#F05050"/>
+    <SolidColorBrush x:Key="Brush.Status.Warn"               Color="#FFBE3C"/>
+    <SolidColorBrush x:Key="Brush.Status.Info"               Color="#64B0E0"/>
+    <SolidColorBrush x:Key="Brush.StatusBar.Background"      Color="#22222C"/>
+
+    <!-- Notification backgrounds -->
+    <SolidColorBrush x:Key="Brush.Notification.Info.Background"    Color="#1A2840"/>
+    <SolidColorBrush x:Key="Brush.Notification.Info.Border"        Color="#2D5080"/>
+    <SolidColorBrush x:Key="Brush.Notification.Warn.Background"    Color="#2A2010"/>
+    <SolidColorBrush x:Key="Brush.Notification.Warn.Border"        Color="#806020"/>
+    <SolidColorBrush x:Key="Brush.Notification.Error.Background"   Color="#2A1010"/>
+    <SolidColorBrush x:Key="Brush.Notification.Error.Border"       Color="#803030"/>
+    <SolidColorBrush x:Key="Brush.Notification.Success.Background" Color="#102010"/>
+    <SolidColorBrush x:Key="Brush.Notification.Success.Border"     Color="#306030"/>
+
+    <!-- DataGrid -->
+    <SolidColorBrush x:Key="Brush.DataGrid.Background"       Color="#22222C"/>
+    <SolidColorBrush x:Key="Brush.DataGrid.AltRow"           Color="#262630"/>
+    <SolidColorBrush x:Key="Brush.DataGrid.GridLine"         Color="#38384A"/>
+    <SolidColorBrush x:Key="Brush.DataGrid.Header"           Color="#2E2E3C"/>
+    <SolidColorBrush x:Key="Brush.DataGrid.HeaderBorder"     Color="#404050"/>
+    <SolidColorBrush x:Key="Brush.DataGrid.RowHover"         Color="#30304A"/>
+    <SolidColorBrush x:Key="Brush.DataGrid.RowSelected"      Color="#1A3A5A"/>
+    <SolidColorBrush x:Key="Brush.DataGrid.RowSelectedBorder" Color="#0096DC"/>
+
+    <!-- Selection -->
+    <SolidColorBrush x:Key="Brush.Selection.Background"      Color="#1A3A5A"/>
+    <SolidColorBrush x:Key="Brush.Selection.Border"          Color="#0096DC"/>
+    <SolidColorBrush x:Key="Brush.Selection.Inactive"        Color="#2A2A3A"/>
+
+    <!-- Input -->
+    <SolidColorBrush x:Key="Brush.Input.Background"          Color="#22222C"/>
+    <SolidColorBrush x:Key="Brush.Input.Disabled"            Color="#1A1A24"/>
+
+</ResourceDictionary>
